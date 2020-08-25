@@ -48,7 +48,7 @@ player_sprite_init::
     inc L
     ld [HL], $80
     inc L
-    set 4, [HL]
+    ld [HL], %00010000
     ; Top right
     ld HL, $FE04
     ld [HL], PLAYER_START_Y
@@ -57,7 +57,7 @@ player_sprite_init::
     inc L
     ld [HL], $81
     inc L
-    set 4, [HL]
+    ld [HL], %00010000
     ; Bottom right
     ld HL, $FE08
     ld [HL], PLAYER_START_Y + 8
@@ -66,7 +66,7 @@ player_sprite_init::
     inc L
     ld [HL], $82
     inc L
-    set 4, [HL]
+    ld [HL], %00010000
     ; Bottom left
     ld HL, $FE0C
     ld [HL], PLAYER_START_Y + 8
@@ -75,7 +75,7 @@ player_sprite_init::
     inc L
     ld [HL], $83
     inc L
-    set 4, [HL]
+    ld [HL], %00010000
     ret
 
 player_update::

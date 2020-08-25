@@ -17,64 +17,108 @@ pipes_load_sprites::
     ; pipe left cap bottom
     ld HL, $FE12
     ld [HL], $86
+    inc HL
+    ld [HL], $00
 
     ; pipe right cap bottom
     ld HL, $FE16
     ld [HL], $87
+    inc HL
+    ld [HL], $00
 
     ; pipe left cap top
     ld HL, $FE1A
     ld [HL], $8A
+    inc HL
+    ld [HL], $00
 
     ; pipe right cap top
     ld HL, $FE1E
     ld [HL], $8B
+    inc HL
+    ld [HL], $00
 
     ; 9 8x8 + 8x8 pipe body
     ld HL, $FE22
     ld [HL], $88
+    inc HL
+    ld [HL], $00
     ld HL, $FE26
     ld [HL], $89
+    inc HL
+    ld [HL], $00
 
     ld HL, $FE2A
     ld [HL], $88
+    inc HL
+    ld [HL], $00
     ld HL, $FE2E
     ld [HL], $89
+    inc HL
+    ld [HL], $00
 
     ld HL, $FE32
     ld [HL], $88
+    inc HL
+    ld [HL], $00
     ld HL, $FE36
     ld [HL], $89
+    inc HL
+    ld [HL], $00
 
     ld HL, $FE3A
     ld [HL], $88
+    inc HL
+    ld [HL], $00
     ld HL, $FE3E
     ld [HL], $89
+    inc HL
+    ld [HL], $00
 
     ld HL, $FE42
     ld [HL], $88
+    inc HL
+    ld [HL], $00
     ld HL, $FE46
     ld [HL], $89
+    inc HL
+    ld [HL], $00
 
     ld HL, $FE4A
     ld [HL], $88
+    inc HL
+    ld [HL], $00
     ld HL, $FE4E
     ld [HL], $89
+    inc HL
+    ld [HL], $00
 
     ld HL, $FE52
     ld [HL], $88
+    inc HL
+    ld [HL], $00
     ld HL, $FE56
     ld [HL], $89
+    inc HL
+    ld [HL], $00
 
     ld HL, $FE5A
     ld [HL], $88
+    inc HL
+    ld [HL], $00
     ld HL, $FE5E
     ld [HL], $89
+    inc HL
+    ld [HL], $00
 
     ld HL, $FE62
     ld [HL], $88
+    inc HL
+    ld [HL], $00
     ld HL, $FE66
     ld [HL], $89
+    inc HL
+    ld [HL], $00
 
     call pipes_gen_pipes
 

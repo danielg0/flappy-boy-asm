@@ -10,7 +10,23 @@ INCLUDE "gb/header.inc"
 
 main::
     
-    jp start_menu
+    jp init
+
+init::
+    call wait_vblank
+    call lcd_off
+
+    ; hide all sprites by setting y-pos in oam to 0
+    ld H, $FE
+    ld A, $00
+.hideSpriteLoop
+    ld L, A
+    ld [HL], $0
+    add 4			; diff between successive oams
+    cp $A0			; if l < a (ie. if hl before $FE9F)
+    jr nz, .hideSpriteLoop	; loop again
+
+    call lcd_on
 
 start_menu::
     ld B, $16 ; clear tile id
